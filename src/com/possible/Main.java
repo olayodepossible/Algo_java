@@ -1,6 +1,9 @@
 package com.possible;
 
 import com.possible.array.BinarySearch;
+import com.possible.array.BubbleSort;
+import com.possible.array.InsertionSort;
+import com.possible.array.MergeSort;
 import com.possible.coding.*;
 
 import java.util.Arrays;
@@ -11,7 +14,7 @@ public class Main {
     private static final Logger log = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
-        int [] A = {1,7,3,6,5,6};
+        int [] A =  { 12, 11, 13, 5, 6, 7 };
 
 
 
@@ -42,9 +45,13 @@ public class Main {
          log.info("DiagonalTraverse solution ==> "+ Arrays.toString(DiagonalTraverse.findDiagonalOrder(arr)));
          log.info("SpiralOrder solution ==> "+ SpiralOrder.spiralOrder(arr));
          PascalTriangle.solution(5);
+         log.info("BinarySearch solution ==> "+ BinarySearch.binarySearchKeepIndexOrder(A, 5));
+         BubbleSort.bubbleSortSolution(A);
+         InsertionSort.insertionSortSolution(A);
          */
 
-        log.info("BinarySearch solution ==> "+ BinarySearch.binarySearchKeepIndexOrder(A, 5));
+        MergeSort.mergeSortSolution(A, 0, A.length -1);
+        System.out.println(Arrays.toString(A));
     }
 
 }
