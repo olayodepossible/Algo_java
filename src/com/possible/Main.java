@@ -1,9 +1,6 @@
 package com.possible;
 
-import com.possible.array.BinarySearch;
-import com.possible.array.BubbleSort;
-import com.possible.array.InsertionSort;
-import com.possible.array.MergeSort;
+import com.possible.array.*;
 import com.possible.coding.*;
 
 import java.util.Arrays;
@@ -48,10 +45,14 @@ public class Main {
          log.info("BinarySearch solution ==> "+ BinarySearch.binarySearchKeepIndexOrder(A, 5));
          BubbleSort.bubbleSortSolution(A);
          InsertionSort.insertionSortSolution(A);
+         QuickSort.quickSortSolution(A, 0, A.length -1);
+         SelectionSort.selectionSortSolution(A);
          */
 
-        MergeSort.mergeSortSolution(A, 0, A.length -1);
-        System.out.println(Arrays.toString(A));
+//        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("111"));
+//        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("011100"));
+        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("10"));
+
     }
 
 }
