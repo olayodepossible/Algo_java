@@ -12,6 +12,10 @@ public class Main {
 
     public static void main(String[] args) {
         int [] A =  { 12, 11, 13, 5, 6, 7 };
+        int[] arr = {1,2,3};
+        int k = 3;
+
+
 
 
 
@@ -28,6 +32,9 @@ public class Main {
              int [] A = {1,7,3,6,5,6};
              int [] [] arr = {{1,2,3},{4,5,6},{7,8,9}};
 
+                String[] Test = {"codility1", "codility3", "codility2", "codility4b", "codility4a"};
+                String[] result = {"Wrong answer", "OK", "OK", "Runtime error", "OK"};
+
          */
 
 
@@ -41,6 +48,11 @@ public class Main {
          log.info("Plus-One solution ==> "+ Arrays.toString(PlusOne.plusOneSolution(new int[]{9})));
          log.info("DiagonalTraverse solution ==> "+ Arrays.toString(DiagonalTraverse.findDiagonalOrder(arr)));
          log.info("SpiralOrder solution ==> "+ SpiralOrder.spiralOrder(arr));
+         log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("10"));
+         log.info("Ans1 ==> "+ NathanScorePoint.scorePointSolution(Test, result));
+
+
+
          PascalTriangle.solution(5);
          log.info("BinarySearch solution ==> "+ BinarySearch.binarySearchKeepIndexOrder(A, 5));
          BubbleSort.bubbleSortSolution(A);
@@ -51,7 +63,8 @@ public class Main {
 
 //        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("111"));
 //        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("011100"));
-        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("10"));
+
+        log.info("Ans1 ==> "+ SubArraySum.subArraySumSolution(arr, k));
 
     }
 
