@@ -15,6 +15,12 @@ public class Main {
         int[] arr = {1,2,3};
         int k = 3;
 
+        int [] b = {-1,0,3,5,9,12};
+       int t = 9;
+
+       int[] nums = {12,345,2,6,7896};
+       int[] duplicateZero = {1,0,2,3,0,4,5,0};
+
 
 
 
@@ -50,6 +56,7 @@ public class Main {
          log.info("SpiralOrder solution ==> "+ SpiralOrder.spiralOrder(arr));
          log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("10"));
          log.info("Ans1 ==> "+ NathanScorePoint.scorePointSolution(Test, result));
+         log.info("Ans1 ==> "+ MaxmumConsequtive.numbersWithEvenDigitCountSolution(nums));
 
 
 
@@ -64,7 +71,12 @@ public class Main {
 //        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("111"));
 //        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("011100"));
 
-        log.info("Ans1 ==> "+ SubArraySum.subArraySumSolution(arr, k));
+//        log.info("Ans1 ==> "+ SubArraySum.subArraySumSolution(arr, k));
+//        log.info("Ans1 ==> "+ );
+
+        ArrayImpl.duplicateZeros1(duplicateZero);
+
+//        [1,0,0,2,3,0,0,4]
 
     }
 
