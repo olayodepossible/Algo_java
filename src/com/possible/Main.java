@@ -21,6 +21,9 @@ public class Main {
        int[] nums = {12,345,2,6,7896};
        int[] duplicateZero = {1,0,2,3,0,4,5,0};
 
+       int [] numMerge1 =  {4,5,6,0,0,0}; int m = 3;
+       int[] nums2 = {1,2,3}; int n = 3;
+
 
 
 
@@ -57,9 +60,16 @@ public class Main {
          log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("10"));
          log.info("Ans1 ==> "+ NathanScorePoint.scorePointSolution(Test, result));
          log.info("Ans1 ==> "+ MaxmumConsequtive.numbersWithEvenDigitCountSolution(nums));
+         log.info("SpiralOrder solution ==> "+ CastleCount.findCastleCountCodility3(new int[]{2, 2, 3, 4, 3, 3, 2, 2, 1, 1, 2, 5}));
+         log.info("Ans1 ==> "+ SubArraySum.subArraySumSolution(arr, k));
+         log.info("SpiralOrder solution ==> "+ Arrays.toString(SpiralOrder.spiralCopy(
+                new int[][]{{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20}})));
+        log.info("Ans1 ==> "+ MakeAllElementEqual.minimumStepToMakeAllElementEqual(new int[]{3, 2, 1, 1, 2, 3, 1}));
+        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("011100"));
 
 
 
+         ArrayImpl.mergeSortNumSolution(numMerge1, m, nums2, n);
          PascalTriangle.solution(5);
          log.info("BinarySearch solution ==> "+ BinarySearch.binarySearchKeepIndexOrder(A, 5));
          BubbleSort.bubbleSortSolution(A);
@@ -68,15 +78,9 @@ public class Main {
          SelectionSort.selectionSortSolution(A);
          */
 
-//        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("111"));
-//        log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("011100"));
 
-//        log.info("Ans1 ==> "+ SubArraySum.subArraySumSolution(arr, k));
-//        log.info("Ans1 ==> "+ );
 
-        ArrayImpl.duplicateZeros1(duplicateZero);
 
-//        [1,0,0,2,3,0,0,4]
 
     }
 

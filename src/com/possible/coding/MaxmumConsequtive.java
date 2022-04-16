@@ -68,7 +68,7 @@ public class MaxmumConsequtive {
         int i=0;
         int j=nums.length-1;
 
-        for (int k=sol.length-1; k>=0; k--){
+        for (int k = sol.length-1; k >= 0; k--){
             if (Math.abs(nums[i]) > Math.abs(nums[j])){
                 sol[k] = nums[i] * nums[i];
                 i++;

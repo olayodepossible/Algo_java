@@ -3,22 +3,6 @@ package com.possible.coding;
 public class ReduceBinaryToZero {
     public static int minStepsToReduceBinaryToZero(String s){
         int steps = 0;
-        int carry = 0;
-       /* for(int i=s.length()-1;i>=1;i--){
-            if(carry == 0) {
-                if(s.charAt(i) == '1'){
-                    steps+=2;
-                    carry = 1;
-                }
-                else{
-                    steps++;
-                }
-            }
-            else{
-                if(s.charAt(i) == '0') steps+=2;
-                else steps++;
-            }
-        }*/
 
         int  intValue = Integer.parseInt(Integer.toString(Integer.parseInt(s, 2), 10));
         while (intValue > 0){
@@ -30,7 +14,24 @@ public class ReduceBinaryToZero {
         }
 
         return steps;
-//        return steps+carry;
+    }
+
+//    ==========================================================================
+
+    public static int minStepsToReduceBinaryToZero2(String S){
+        String regex = "^0+(?!$)"; // remove leading zeros
+        S = S.replaceAll(regex, "");
+        int zerosCount = 0;
+        int onesCount = 0;
+
+        for(int i = 0; i< S.length(); i++) {
+            if (S.charAt(i) == '0')
+                zerosCount++;
+            else
+                onesCount++;
+        }
+
+        return zerosCount + (onesCount - 1) * 2 + 1;
     }
 
 

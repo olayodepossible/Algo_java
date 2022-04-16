@@ -57,8 +57,59 @@ public class SpiralOrder {
             m = m-2;
             n = n-2;
         }
-
+//
+//[[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]
         return ans;
+    }
+
+    public static int[] spiralCopy(int[][] inputMatrix) {
+
+        if(inputMatrix == null || inputMatrix.length == 0) return new int[]{0};
+
+        int m = inputMatrix.length;
+        int n = inputMatrix[0].length;
+        int idx = 0;
+        int []result = new int[m*n];
+
+        int topRow = 0;
+        int btmRow = m - 1;
+        int leftCol = 0;
+        int rightCol = n -1;
+
+        while(topRow <= btmRow && leftCol <= rightCol){
+
+            for(int i = leftCol; i <= rightCol; i++){
+                result[idx] = inputMatrix[topRow][i];
+                idx++;
+            }
+            topRow++;
+
+            for(int i = topRow; i <= btmRow; i++){
+                result[idx] = inputMatrix[i][rightCol];
+                idx++;
+            }
+            rightCol--;
+
+            if(topRow <= btmRow){
+                for(int i = rightCol; i >= leftCol; i--){
+                    result[idx] = inputMatrix[btmRow][i];
+                    idx++;
+                }
+                btmRow--;
+            }
+
+            if(leftCol <= rightCol){
+                for(int i = btmRow; i >= topRow; i--){
+                    result[idx] = inputMatrix[i][leftCol];
+                    idx++;
+                }
+                leftCol++;
+            }
+
+        }
+        return result;
+
+//        return arrList.stream().mapToInt(Integer::intValue).toArray();
     }
 
 
