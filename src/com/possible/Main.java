@@ -56,11 +56,11 @@ public class Main {
          log.info("NumberTwiceOfOthers solution ==> "+ NumberTwiceOfOthers.dominantIndex(A));
          log.info("Plus-One solution ==> "+ Arrays.toString(PlusOne.plusOneSolution(new int[]{9})));
          log.info("DiagonalTraverse solution ==> "+ Arrays.toString(DiagonalTraverse.findDiagonalOrder(arr)));
-         log.info("SpiralOrder solution ==> "+ SpiralOrder.spiralOrder(arr));
+
          log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("10"));
          log.info("Ans1 ==> "+ NathanScorePoint.scorePointSolution(Test, result));
          log.info("Ans1 ==> "+ MaxmumConsequtive.numbersWithEvenDigitCountSolution(nums));
-         log.info("SpiralOrder solution ==> "+ CastleCount.findCastleCountCodility3(new int[]{2, 2, 3, 4, 3, 3, 2, 2, 1, 1, 2, 5}));
+         log.info("CastleCount solution ==> "+ CastleCount.findCastleCountCodility3(new int[]{2, 2, 3, 4, 3, 3, 2, 2, 1, 1, 2, 5}));
          log.info("Ans1 ==> "+ SubArraySum.subArraySumSolution(arr, k));
          log.info("SpiralOrder solution ==> "+ Arrays.toString(SpiralOrder.spiralCopy(
                 new int[][]{{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20}})));
@@ -69,7 +69,7 @@ public class Main {
 
 
 
-         ArrayImpl.mergeSortNumSolution(numMerge1, m, nums2, n);
+
          PascalTriangle.solution(5);
          log.info("BinarySearch solution ==> "+ BinarySearch.binarySearchKeepIndexOrder(A, 5));
          BubbleSort.bubbleSortSolution(A);
@@ -80,6 +80,8 @@ public class Main {
 
 
 
+        ArrayImpl.removeElement(new int[]{ 3,2,2,3}, 3);
+//        ArrayImpl.mergeSortNumSolution(numMerge1, m, nums2, n);
 
 
     }

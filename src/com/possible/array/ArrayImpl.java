@@ -32,26 +32,6 @@ public class ArrayImpl {
     // ========================= MergeSort ===================================
     // nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
 
-    public static void mergeSortNums(int[] nums1, int m, int[] nums2, int n) {
-
-        for (int i = m; i < nums1.length; i++) {
-            nums1[i] = nums2[i-m];
-        }
-
-        for (int i = 0, j= nums1.length-1; i < nums1.length; i++, j--) {
-
-            if (nums1[i] > nums1[j]){
-                int temp = nums1[i];
-                nums1[i] = nums1[j];
-                nums1[j] = temp;
-            }
-        }
-
-
-        System.out.println(Arrays.toString(nums1));
-
-    }
-
     public static void mergeSortNumSolution(int[] nums1, int m, int[] nums2, int n) {
 
         int i = m-1;  // to avoid outBound exception
@@ -70,7 +50,7 @@ public class ArrayImpl {
 
     }
 
-    public static boolean solutionCodility(int[] A, int K) {
+    public static boolean increasingOrderOfKeyCodilitySolution(int[] A, int K) {
         int n = A.length;
         for (int i = 0; i < n - 1; i++) {
             if (A[i] + 1 < A[i + 1])
@@ -80,6 +60,18 @@ public class ArrayImpl {
             return false;
         else
             return true;
+    }
+
+    public static int removeElement(int[] nums, int val) {
+        int k = 0;
+        for(int i = 0; i<nums.length; i++) {
+            if(nums[i] != val) {
+                nums[k++] = nums[i];
+            }
+        }
+
+        return k;
+
     }
 
 
