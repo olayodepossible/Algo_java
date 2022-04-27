@@ -80,7 +80,7 @@ public class Main {
 
 
 
-        ArrayImpl.removeElement(new int[]{ 3,2,2,3}, 3);
+        ArrayImpl.removeDuplicatesSolution2(new int[]{ 0,0,1,1,1,2,2,3,3,4});
 //        ArrayImpl.mergeSortNumSolution(numMerge1, m, nums2, n);
 
 

@@ -23,7 +23,6 @@ public class ArrayImpl {
             newArr[j] = arr[i];
         }
 
-//        arr = newArr;
 
         System.out.println( Arrays.toString(newArr));
     }
@@ -63,6 +62,11 @@ public class ArrayImpl {
     }
 
     public static int removeElement(int[] nums, int val) {
+        if(nums.length==1 && nums[0]!=val)
+            return 1;
+        if(nums.length == 1)
+            return 0;
+
         int k = 0;
         for(int i = 0; i<nums.length; i++) {
             if(nums[i] != val) {
@@ -75,5 +79,31 @@ public class ArrayImpl {
     }
 
 
+    public static int removeDuplicates(int[] nums) {
+        int k = 0;
+        for(int i = 0; i <= nums.length; i++){
+            if (i+1 == nums.length ){
+                nums[k++] = nums[i];
+                break;
+            }
+
+            else if(nums[i] != nums[i+1]){
+                nums[k++] = nums[i];
+            }
+        }
+        System.out.println(Arrays.toString(nums) + k);
+        return k;
+
+    }
+
+    public static int removeDuplicatesSolution2(int[] nums) {
+        int lastIdx =0;
+        for(int i=1;i<nums.length;i++){
+            if(nums[i]!=nums[lastIdx]){
+                nums[++lastIdx]=nums[i];
+            }
+        }
+        return lastIdx+1;
+    }
 
 }
