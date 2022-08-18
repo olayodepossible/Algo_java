@@ -1,9 +1,8 @@
 package com.possible;
 
-import com.possible.array.*;
 import com.possible.coding.*;
 
-import java.util.Arrays;
+import java.util.*;
 import java.util.logging.Logger;
 
 public class Main {
@@ -11,18 +10,43 @@ public class Main {
     private static final Logger log = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
-        int [] A =  { 12, 11, 13, 5, 6, 7 };
-        int[] arr = {1,2,3};
-        int k = 3;
 
-        int [] b = {-1,0,3,5,9,12};
-       int t = 9;
+        List<Student> studentList = new ArrayList<>();
+        for (int i = 0; i < 100 ; i++) {
+            String name = UUID.randomUUID().toString();
+            int age = new Random().nextInt(100 - 20) +20;
+            double height = new Random().nextDouble() +1.1;
+            Student student = new Student(name, age, height);
+            studentList.add(student);
+        }
 
-       int[] nums = {12,345,2,6,7896};
-       int[] duplicateZero = {1,0,2,3,0,4,5,0};
+//        List<Student> studentListStream = studentList.stream().sorted().collect(Collectors.toList());
+        studentList.sort(Student.NameComparator);
+//        Collections.sort(studentList);
 
-       int [] numMerge1 =  {4,5,6,0,0,0}; int m = 3;
-       int[] nums2 = {1,2,3}; int n = 3;
+//        for (Student st: studentList) {
+////          log.info(" studentListStream - \n "+ st);
+//          log.info(" studentListStream - \n "+ st);
+//        }
+
+        if (AnagramCode.isAnagram("Keep", "Peek"))log.info("is Anagram");
+        else log.info("is NOT Anagram");
+
+
+
+
+//        int [] A =  { 12, 11, 13, 5, 6, 7 };
+//        int[] arr = {1,2,3};
+//        int k = 3;
+//
+//        int [] b = {-1,0,3,5,9,12};
+//       int t = 9;
+//
+//       int[] nums = {12,345,2,6,7896};
+//       int[] duplicateZero = {1,0,2,3,0,4,5,0};
+//
+//       int [] numMerge1 =  {4,5,6,0,0,0}; int m = 3;
+//       int[] nums2 = {1,2,3}; int n = 3;
 
 
 
@@ -66,10 +90,14 @@ public class Main {
                 new int[][]{{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15},{16,17,18,19,20}})));
         log.info("Ans1 ==> "+ MakeAllElementEqual.minimumStepToMakeAllElementEqual(new int[]{3, 2, 1, 1, 2, 3, 1}));
         log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("011100"));
+        log.info("Ans1 ==> "+ InPlaceReplacement.replaceElements(new int[]{17,18,5,4,6,1}));
 
 
 
 
+        ArrayImpl.mergeSortNumSolution(numMerge1, m, nums2, n);
+        ArrayImpl.removeDuplicatesSolution3(new int[]{ 1,1,2});
+        ArrayImpl.removeDuplicatesSolution2(new int[]{ 0,0,1,1,1,2,2,3,3,4});
          PascalTriangle.solution(5);
          log.info("BinarySearch solution ==> "+ BinarySearch.binarySearchKeepIndexOrder(A, 5));
          BubbleSort.bubbleSortSolution(A);
@@ -79,9 +107,11 @@ public class Main {
          */
 
 
+//        ArrayImpl.cout(new String[]{"a", "b", "a"});
 
-        ArrayImpl.removeDuplicatesSolution2(new int[]{ 0,0,1,1,1,2,2,3,3,4});
-//        ArrayImpl.mergeSortNumSolution(numMerge1, m, nums2, n);
+//        log.info("Ans1 ==> "+ ArrayImpl.wordCount(new String[]{"a", "b", "a"}));
+
+//        Write a program to confirm if a string is an analgram
 
 
     }

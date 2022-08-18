@@ -1,8 +1,6 @@
 package com.possible.array;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class ArrayImpl {
 
@@ -43,8 +41,6 @@ public class ArrayImpl {
         while(j >= 0){
             nums1[k--] = nums2[j--];
         }
-
-
         System.out.println(Arrays.toString(nums1));
 
     }
@@ -73,37 +69,74 @@ public class ArrayImpl {
                 nums[k++] = nums[i];
             }
         }
-
         return k;
-
     }
 
-
-    public static int removeDuplicates(int[] nums) {
-        int k = 0;
-        for(int i = 0; i <= nums.length; i++){
-            if (i+1 == nums.length ){
-                nums[k++] = nums[i];
-                break;
-            }
-
-            else if(nums[i] != nums[i+1]){
-                nums[k++] = nums[i];
-            }
-        }
-        System.out.println(Arrays.toString(nums) + k);
-        return k;
-
-    }
 
     public static int removeDuplicatesSolution2(int[] nums) {
-        int lastIdx =0;
-        for(int i=1;i<nums.length;i++){
-            if(nums[i]!=nums[lastIdx]){
-                nums[++lastIdx]=nums[i];
+        int lastIdx =1;
+        for(int i = 1; i < nums.length; i++){
+            if(nums[i] != nums[lastIdx]){
+                nums[++lastIdx] = nums[i];
+
             }
         }
         return lastIdx+1;
+    }
+
+    public static int removeDuplicatesSolution3(int[] nums) {
+        int left =1;
+
+        for(int right = 1; right < nums.length; right++){
+            if(nums[right] != nums[right - 1]){
+                nums[left++] = nums[right];
+            }
+        }
+        return left;
+    }
+
+    public static void moveZeroSolution(int[] nums) {
+        int left = 0;
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == 0) {
+                left++;
+            } else {
+                if(left > 0) {
+                    nums[i-left] = nums[i];
+                    nums[i] = 0;
+                }
+            }
+
+        }
+    }
+
+    public static Map<String, Integer> wordCount(String[] words) {
+        Map<String, Integer> ans = new HashMap<>();
+        for (String s:words) {
+
+            if (!ans.containsKey(s)) {  // first time we've seen this string
+                ans.put(s, 1);
+            }
+            else {
+                int count = ans.get(s);
+                ans.put(s, count + 1);
+            }
+        }
+        return ans;
+    }
+
+    public int[] sortArrayByParity(int[] nums) {
+
+        int left = 0;
+        for (int i = 0; i < nums.length; i++){
+            if( nums[i] % 2 == 0){
+                int temp = nums[left];
+                nums[left++] = nums[i];
+                nums[i] = temp;
+            }
+        }
+
+        return nums;
     }
 
 }
