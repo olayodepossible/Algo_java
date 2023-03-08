@@ -11,6 +11,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < 100 ; i++) {
             String name = UUID.randomUUID().toString();
@@ -112,6 +114,13 @@ public class Main {
 //        log.info("Ans1 ==> "+ ArrayImpl.wordCount(new String[]{"a", "b", "a"}));
 
 //        Write a program to confirm if a string is an analgram
+
+
+        /*
+            System.out.println(ReverseMaintainPosition.reverseLetters("z<*zj")); //j<*zz
+            System.out.println(SetBitAlgo.setBit(5));
+
+        **/
 
 
     }
