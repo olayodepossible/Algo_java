@@ -1,4 +1,6 @@
+/*
 package com.possible.coding;
+
 
 import java.io.*;
 import java.util.*;
@@ -98,3 +100,4 @@ public class AutoCorrector {
         System.out.println("suggest of reah is " + sc.suggestSimilarWord("reah"));
     }
 }
+*/
