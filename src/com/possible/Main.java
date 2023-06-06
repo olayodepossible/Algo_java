@@ -10,8 +10,8 @@ public class Main {
     private static final Logger log = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
-
-
+        String an [] = "http:localhost:8080/api/service/v1/jdf-parser/098886".split("jdf-parser/");
+        System.out.println(Arrays.toString(an));
 
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i < 100 ; i++) {

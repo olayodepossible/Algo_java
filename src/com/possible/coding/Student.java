@@ -31,7 +31,6 @@ public class Student implements Comparable<Student> {
     }
 
     public static Comparator<Student> NameComparator = new Comparator<Student>() {
-
         @Override
         public int compare(Student e1, Student e2) {
             return e1.getName().compareTo(e2.getName());
