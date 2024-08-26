@@ -9,7 +9,7 @@ public class Mai {
             }
 
             public static String getValue(){
-                return "Yes "+new String();
+                return "Yes ";
             }
         }
 
