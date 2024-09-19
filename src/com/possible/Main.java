@@ -67,7 +67,7 @@ public class Main {
              int [] A = {1,7,3,6,5,6};
              int [] [] arr = {{1,2,3},{4,5,6},{7,8,9}};
 
-                String[] Test = {"codility1", "codility3", "codility2", "codility4b", "codility4a"};
+                String[] RenTest = {"codility1", "codility3", "codility2", "codility4b", "codility4a"};
                 String[] result = {"Wrong answer", "OK", "OK", "Runtime error", "OK"};
 
          */
@@ -84,7 +84,7 @@ public class Main {
          log.info("DiagonalTraverse solution ==> "+ Arrays.toString(DiagonalTraverse.findDiagonalOrder(arr)));
 
          log.info("Ans1 ==> "+ ReduceBinaryToZero.minStepsToReduceBinaryToZero("10"));
-         log.info("Ans1 ==> "+ NathanScorePoint.scorePointSolution(Test, result));
+         log.info("Ans1 ==> "+ NathanScorePoint.scorePointSolution(RenTest, result));
          log.info("Ans1 ==> "+ MaxmumConsequtive.numbersWithEvenDigitCountSolution(nums));
          log.info("CastleCount solution ==> "+ CastleCount.findCastleCountCodility3(new int[]{2, 2, 3, 4, 3, 3, 2, 2, 1, 1, 2, 5}));
          log.info("Ans1 ==> "+ SubArraySum.subArraySumSolution(arr, k));
